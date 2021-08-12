@@ -1,13 +1,14 @@
 {
-  "name": "vue-easytable",
+  "name": "vue-iwarm-tools",
   "version": "1.7.2",
   "description": "vue table component",
   "main": "libs/index.js",
-  "author": "https://github.com/huangshuwei",
+  "author": "https://github.com/0wangxiaowei",
+  "private":false,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huangshuwei/vue-easytable.git"
+    "url": "git+https://github.com/0wangxiaowei/vue-easytable.git"
   },
   "files": [
     "libs",
