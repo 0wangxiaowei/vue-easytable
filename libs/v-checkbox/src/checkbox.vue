@@ -104,7 +104,7 @@
                     if (Array.isArray(checkboxGroup.value) && checkboxGroup.value.length > 0) {
 
                         if (checkboxGroup.value.indexOf(this.label) > -1) {
-
+                            debugger
                             this.model = true;
                         }
                     }

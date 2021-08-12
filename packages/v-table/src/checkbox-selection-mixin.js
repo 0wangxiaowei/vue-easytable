@@ -178,8 +178,8 @@ export default {
             this.internalTableData.filter((item, index) => {
 
                 if (item._checked) {
-
-                    this.checkboxGroupModel.push(index);
+                        debugger
+                    this.checkboxGroupModel.push(item.index);
                 }
             })
 

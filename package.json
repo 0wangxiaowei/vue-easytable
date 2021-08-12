@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "nprogress": "^0.2.0",
+    "tapable": "^2.2.0",
     "vue": "^2.2.6",
     "vue-loader": "^12.2.1",
     "vue-router": "^2.4.0",

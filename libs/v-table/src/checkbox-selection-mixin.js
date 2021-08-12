@@ -33,8 +33,8 @@ exports.default = {
                                     var _this = this;
 
                                     return this.internalTableData.filter(function (item, index) {
-
-                                                return _this.checkboxGroupModel.indexOf(index) > -1;
+                                            
+                                                return _this.checkboxGroupModel.indexOf(item.index) > -1;
                                     });
                         },
                         hasSelectionColumns: function hasSelectionColumns() {
@@ -101,11 +101,12 @@ exports.default = {
                                     var _this2 = this;
 
                                     this.$nextTick(function (x) {
+                                        
                                                 _this2.selectChange && _this2.selectChange(_this2.getCheckedTableRow, rowData);
                                     });
                         },
                         handleCheckGroupChange: function handleCheckGroupChange() {
-
+                                
                                     this.selectGroupChange && this.selectGroupChange(this.getCheckedTableRow);
 
                                     this.setCheckState();
@@ -149,6 +150,7 @@ exports.default = {
                                     }
                         },
                         updateCheckboxGroupModel: function updateCheckboxGroupModel() {
+                            
                                     var _this3 = this;
 
                                     if (!this.hasSelectionColumns) {
@@ -160,8 +162,9 @@ exports.default = {
                                     this.internalTableData.filter(function (item, index) {
 
                                                 if (item._checked) {
+                                                    
 
-                                                            _this3.checkboxGroupModel.push(index);
+                                                            _this3.checkboxGroupModel.push(item.index);
                                                 }
                                     });
 

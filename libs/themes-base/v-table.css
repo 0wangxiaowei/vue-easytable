@@ -58,6 +58,7 @@
 
 .v-table-htable, .v-table-btable, .v-table-ftable {
     border-collapse: separate;
+    top: 10px;
 }
 
 /*.v-table-btable tr:nth-child(even) {

@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _table = require('./src/table.vue');
+var _table = require('./src/table-new.vue');
 
 var _table2 = _interopRequireDefault(_table);
 

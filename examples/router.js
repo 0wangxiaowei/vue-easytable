@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 const childRouterTpl = r => require.ensure([], () => r(require('./comp/child-router-tpl.vue')), 'childRouterTpl');
-
+const home = r => require.ensure([], () => r(require('./home/home.vue')), 'home');
 const intro = r => require.ensure([], () => r(require('./doc/intro.md')), 'intro');
 const install = r => require.ensure([], () => r(require('./doc/install.md')), 'install');
 const start = r => require.ensure([], () => r(require('./doc/strart.md')), 'start');
@@ -37,7 +37,8 @@ Vue.use(VueRouter)
 export default new VueRouter({
     linkActiveClass: 'active',
     routes: [
-        { path: '/', redirect: '/intro',name:'简介' }, // 默认路由
+        { path: '/', redirect: '/home',name:'home' }, // 默认路由
+        { path: '/home', component: home ,name:'home'},
         { path: '/intro', component: intro ,name:'简介'},
         { path: '/install', component: install ,name:'安装'},
         { path: '/start', component: start ,name:'开始'},
@@ -68,7 +69,7 @@ export default new VueRouter({
 
         {
             path: '*',
-            redirect: '/intro'
+            redirect: '/home'
         }
         /*  {
          path: '*', component: {
