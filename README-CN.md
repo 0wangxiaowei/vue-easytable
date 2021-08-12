@@ -86,7 +86,7 @@
 ## 安装
 
 ```
-npm install vue-easytable
+npm i vue-iwarm-tools
 ```
 
 or

@@ -3,7 +3,7 @@
 :::anchor npm & yarn 安装
 
 ```javascript
-npm install vue-easytable
+npm i vue-iwarm-tools
 ```
 
 或者

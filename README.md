@@ -87,7 +87,7 @@ If there is no feature you want,
 ## Install
 
 ```
-npm install vue-easytable
+npm i vue-iwarm-tools
 ```
 
 or
