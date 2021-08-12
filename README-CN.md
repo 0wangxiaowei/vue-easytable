@@ -33,7 +33,7 @@
 ## 安装
 
 ```javascript
-npm install vue-easytable --save-dev
+npm install vue-iwarm-tools --save-dev
 ```
 
 ## 使用（[更多](http://doc.huangsw.com/vue-easytable/app.html)）

@@ -65,7 +65,7 @@
 ### NPM 方式使用
 
 ```javascript
-npm install vue-easytable --save-dev
+npm install vue-iwarm-tools --save-dev
 ```
 
 ### 使用
