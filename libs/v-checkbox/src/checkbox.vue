@@ -117,9 +117,9 @@
             // 通过单选更新 model
             updateModelBySingle(){
 
-                if (!this.disabled){
+                // if (!this.disabled){
                     this.model = this.value;
-                }
+                // }
             },
 
             // 父组件调用更新 model
@@ -127,14 +127,14 @@
 
                 if (checkBoxGroup.indexOf(this.label) > -1) {
 
-                    if (!this.disabled){
+                    // if (!this.disabled){
                         this.model = true;
-                    }
+                    // }
                 }else{
 
-                    if (!this.disabled){
+                    // if (!this.disabled){
                         this.model = false;
-                    }
+                    // }
                 }
 
             }
