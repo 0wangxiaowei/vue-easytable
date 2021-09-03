@@ -683,7 +683,7 @@
     <template v-if="tableType == 'rightFrozen'">
       <!--左列-->
       <template v-if="frozenCols.length > 0">
-        <div class="v-table-leftview" :style="{ width: leftViewWidth + 'px',left: rightViewWidth + 'px', 'border-width': 2+'px','border-style': 'solid','border-color': 'lightgray'}">
+        <div class="v-table-leftview" :style="{ width: leftViewWidth + 'px',left: rightViewWidth + 'px', top:-1 + 'px', 'border-width': 1+'px','border-style': 'solid','border-color': 'lightgray'}">
           <!--左列头-->
           <div
             class="v-table-header v-table-title-class"
