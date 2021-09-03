@@ -680,7 +680,7 @@
         </div>
       </div>
     </template>
-    <template v-else-if>
+    <template v-else-if="tableType == 'rightFrozen'">
       <!--左列-->
       <template v-if="frozenCols.length > 0">
         <div class="v-table-leftview" :style="{ width: leftViewWidth + 'px',left: rightViewWidth + 'px'}">
