@@ -683,13 +683,15 @@
     <template v-if="tableType == 'rightFrozen'">
       <!--左列-->
       <template v-if="frozenCols.length > 0">
-        <div class="v-table-leftview" :style="{ width: leftViewWidth + 'px',left: rightViewWidth + 'px', top:-1 + 'px', 'border-width': 1+'px','border-style': 'solid','border-color': 'lightgray'}">
+        <div class="v-table-leftview" :style="{ width: leftViewWidth + 'px',left: rightViewWidth + 'px','background-color': '#f4f4f4',}">
           <!--左列头-->
           <div
             class="v-table-header v-table-title-class"
             :style="{
               width: leftViewWidth + 'px',
               'background-color': titleBgColor,
+              'margin-bottom': 5 + 'px',
+              'margin-left': 5 + 'px'
             }"
           >
             <div class="v-table-header-inner" style="display: block">
@@ -873,8 +875,10 @@
           <div
             class="v-table-body v-table-body-class"
             :style="{
+              'background-color': '#ffffff',
               width: leftViewWidth + 'px',
               height: bodyViewHeight + 'px',
+              'margin-left': 5 + 'px'
             }"
           >
             <div :class="['v-table-body-inner', vTableBodyInner]">
@@ -1091,13 +1095,14 @@
         </div>
       </template>
       <!--右列-->
-      <div class="v-table-rightview" :style="{ width: rightViewWidth + 'px',left: 0 }">
+      <div class="v-table-rightview" :style="{ width: rightViewWidth + 'px',left: 0,'background-color': '#f4f4f4',}">
         <!--右列头-->
         <div
           class="v-table-header v-table-title-class"
           :style="{
             width: rightViewWidth - 1 + 'px',
             'background-color': titleBgColor,
+            'margin-bottom': 5 + 'px'
           }"
         >
           <div class="v-table-header-inner" style="display: block">
@@ -1275,6 +1280,7 @@
         <div
           :class="['v-table-body v-table-body-class', vTableRightBody]"
           :style="{
+            'background-color': tableBgColor,
             width: rightViewWidth + 'px',
             height: bodyViewHeight + 'px',
           }"
