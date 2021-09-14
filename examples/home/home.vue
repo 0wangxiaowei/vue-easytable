@@ -1,11 +1,8 @@
 <template>
-    <v-table :width="500" :height="300" 
-    tableType="new" :columns="columns" 
+    <v-table :width="500" :height="800" 
+    tableType="rightFrozen" :columns="columns" 
     :table-data="tableData" 
-    :show-vertical-border="false"
-     :select-all="selectALL"
-                :select-change="selectgetwatChange"
-                @on-custom-comp="customCompFunc"></v-table>
+    ></v-table>
 </template>
 
 
@@ -31,15 +28,15 @@
 
                      {"name":"赵伟1","tel":"156*****1987","hobby":"钢琴、书法、唱歌","address":"上海市黄浦区金陵东路569号17楼"},
                      {"name":"李伟1","tel":"182*****1538","hobby":"钢琴、书法、唱歌","address":"上海市奉贤区南桥镇立新路12号2楼"},
-                     {"name":"孙伟2","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
-                     {"name":"周伟2","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
+                    //  {"name":"孙伟2","tel":"161*****0097","hobby":"钢琴、书法、唱歌","address":"上海市崇明县城桥镇八一路739号"},
+                    //  {"name":"周伟2","tel":"197*****1123","hobby":"钢琴、书法、唱歌","address":"上海市青浦区青浦镇章浜路24号"},
                  ],
                 columns: [
-                     {width: 60, titleAlign: 'center',columnAlign:'center',type: 'selection'},
-                    {field: 'name', title:'姓名', width: 100, titleAlign: 'center',columnAlign:'center'},
+                    //  {width: 60, titleAlign: 'center',columnAlign:'center',type: 'selection'},
+                    {field: 'name', title:'姓名', width: 100, titleAlign: 'center',columnAlign:'center',isFrozen:true},
                     {field: 'tel', title: '手机号码', width: 260, titleAlign: 'center',columnAlign:'center'},
-                    // {field: 'hobby', title: '爱好', width: 330, titleAlign: 'center',columnAlign:'center'},
-                    // {field: 'address', title: '地址', titleAlign: 'center',columnAlign:'left'}
+                    {field: 'hobby', title: '爱好', width: 330, titleAlign: 'center',columnAlign:'center'},
+                    {field: 'address', title: '地址', titleAlign: 'center',columnAlign:'left'}
                 ]
             }
         },
