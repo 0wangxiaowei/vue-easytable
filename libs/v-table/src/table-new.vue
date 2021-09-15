@@ -7,7 +7,7 @@
       'background-color': tableBgColor,
     }"
   >
-    <template v-if="tableType == 'new'">
+    <template v-if="tableType == 'horizontal'">
       <!--左列-->
       <template v-if="frozenCols.length > 0">
         <div class="v-table-leftview" :style="{ width: leftViewWidth + 'px' }">
@@ -680,7 +680,7 @@
         </div>
       </div>
     </template>
-    <template v-if="tableType == 'rightFrozen'">
+    <template v-else-if="tableType == 'rightFrozen'">
       <!--左列-->
       <template v-if="frozenCols.length > 0">
         <div class="v-table-leftview" :style="{ width: leftViewWidth + 'px',left: rightViewWidth + 'px','background-color': '#f4f4f4',}">
@@ -2822,7 +2822,7 @@ export default {
         }
         this.resultTableData = result;
       }
-
+    
       return Array.isArray(this.tableData) ? deepClone(this.tableData) : [];
     },
 
