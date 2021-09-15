@@ -2786,7 +2786,7 @@ export default {
 
       var totalColumnsHeight = this.getTotalColumnsHeight();
       // 当没有设置高度时计算总高度 || 设置的高度大于所有列高度之和时
-        if(this.tableType=='new'){
+        if(this.tableType=='horizontal'){
             this.internalHeight = this.height;
         }else{
              if (
