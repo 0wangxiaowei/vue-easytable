@@ -34,7 +34,7 @@ exports.default = {
 
                                     return this.internalTableData.filter(function (item, index) {
                                             
-                                                return _this.checkboxGroupModel.indexOf(item.index) > -1;
+                                                return _this.checkboxGroupModel.indexOf(item.listindex) > -1;
                                     });
                         },
                         hasSelectionColumns: function hasSelectionColumns() {

@@ -191,7 +191,7 @@
                               @change="handleCheckChange(item)"
                               :show-slot="false"
                               :disabled="item._disabled"
-                              :label="item.index"
+                              :label="item.listindex"
                             ></v-checkbox>
                           </span>
                           <span v-else>
@@ -2374,7 +2374,7 @@ export default {
            let array = [];
            for (let index = 0; index < this.tableData.length; index++) {
                let el = this.tableData[index]
-               el.index = index
+               el.listindex = index
                array.push(el);
         }
        

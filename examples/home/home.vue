@@ -1,5 +1,5 @@
 <template>
-    <v-table width="100%" :height="800" 
+    <v-table width="100%" :height="300" 
 
     tableType="horizontal" :columns="columns" 
     :table-data="tableData" 
