@@ -23,7 +23,7 @@ export default {
             this.internalTableData.filter((item, index) => {
 
                 if (item._disabled && !item._checked) {
-                    result.push(index);
+                    result.push(item.listindex);
                 }
             })
             return result;
@@ -68,7 +68,7 @@ export default {
             this.internalTableData.filter((item, index) => {
 
                 if (item._disabled && item._checked) {
-                    result.push(index);
+                    result.push(item.listindex);
                 }
             })
             return result;

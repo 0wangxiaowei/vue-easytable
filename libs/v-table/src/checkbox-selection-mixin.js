@@ -24,7 +24,7 @@ exports.default = {
                                     this.internalTableData.filter(function (item, index) {
 
                                                 if (item._disabled && !item._checked) {
-                                                            result.push(index);
+                                                            result.push(item.listindex);
                                                 }
                                     });
                                     return result;
@@ -65,7 +65,7 @@ exports.default = {
                                     this.internalTableData.filter(function (item, index) {
 
                                                 if (item._disabled && item._checked) {
-                                                            result.push(index);
+                                                            result.push(item.listindex);
                                                 }
                                     });
                                     return result;
@@ -164,7 +164,7 @@ exports.default = {
                                                 if (item._checked) {
                                                     
 
-                                                            _this3.checkboxGroupModel.push(item.index);
+                                                            _this3.checkboxGroupModel.push(item.listindex);
                                                 }
                                     });
 
