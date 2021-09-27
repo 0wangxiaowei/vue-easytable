@@ -1937,6 +1937,10 @@ export default {
       type: Number,
       default: 50,
     },
+    nextnum:{
+      type: Number,
+      default: 0,
+    },
     height: {
       type: Number,
       require: false,
@@ -2430,6 +2434,27 @@ export default {
         this.initColumns();
         // fix issue #261
         this.tableResize();
+      },
+      deep: true,
+    },
+
+    nextnum: {
+      handler: function (newVal) {
+        this.skipRenderCells = [];
+
+        this.internalTableData = this.initInternalTableData(newVal);
+
+        this.updateCheckboxGroupModel();
+
+        this.tableEmpty();
+
+        if (Array.isArray(newVal) && newVal.length > 0) {
+          this.initView();
+
+          this.scrollControl();
+        }
+
+        this.resize();
       },
       deep: true,
     },
