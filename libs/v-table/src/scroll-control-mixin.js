@@ -20,6 +20,14 @@ exports.default = {
                                     var scrollHeight = e1.wheelDelta || e1.detail * -1;
                                     body2.scrollTop = body2.scrollTop - scrollHeight;
                         },
+                        body2Mousewheel: function body2Mousewheel(e) {
+
+                            var body2 = this.$el.querySelector('.v-table-rightview .v-table-body');
+
+                            var e1 = e.originalEvent || window.event || e;
+                            var scrollHeight = e1.wheelDelta || e1.detail * -1;
+                            body2.scrollLeft = body2.scrollLeft - scrollHeight;
+                },
                         bodyScrollTop: function bodyScrollTop() {
 
                                     var body1 = this.$el.querySelector('.v-table-leftview .v-table-body');
@@ -61,8 +69,9 @@ exports.default = {
                                                 var body1 = _this.$el.querySelector('.v-table-leftview .v-table-body');
                                                 var body2 = _this.$el.querySelector('.v-table-rightview .v-table-body');
                                                 var rightViewFooter = _this.$el.querySelector('.v-table-rightview .v-table-footer');
-
+                                                debugger
                                                 _utils2.default.bind(body1, 'mousewheel', _this.body1Mousewheel);
+                                                _utils2.default.bind(body2, 'mousewheel', _this.body2Mousewheel);
                                                 _utils2.default.bind(body2, 'scroll', _this.body2Scroll);
                                                 _utils2.default.bind(rightViewFooter, 'scroll', _this.rightViewFooterScroll);
                                     });
