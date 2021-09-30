@@ -69,7 +69,7 @@ exports.default = {
                                                 var body1 = _this.$el.querySelector('.v-table-leftview .v-table-body');
                                                 var body2 = _this.$el.querySelector('.v-table-rightview .v-table-body');
                                                 var rightViewFooter = _this.$el.querySelector('.v-table-rightview .v-table-footer');
-                                                debugger
+
                                                 _utils2.default.bind(body1, 'mousewheel', _this.body1Mousewheel);
                                                 _utils2.default.bind(body2, 'mousewheel', _this.body2Mousewheel);
                                                 _utils2.default.bind(body2, 'scroll', _this.body2Scroll);

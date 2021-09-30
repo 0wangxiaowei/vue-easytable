@@ -2,7 +2,7 @@
 <div>
     <v-table width="100%" :height="300" 
 
-   :columns="columns" 
+    tableType="horizontal" :columns="columns" 
     :table-data="tableData" 
     :nextnum="nextnum"
     :rownumber="4"
@@ -68,4 +68,6 @@
 
     border:0px solid rgb(245, 231, 231);
 }
+
+
 </style>
