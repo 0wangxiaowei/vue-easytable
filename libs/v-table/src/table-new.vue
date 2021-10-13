@@ -2506,6 +2506,11 @@ export default {
   border:1px solid rgba(221, 221, 221, 1);
   margin: 20px;
 }
+.columncellcanedit{
+    background-color: #2db7f5;
+    color: white;
+    cursor:pointer
+  }
 .table-div-super {
   display: flex;
 }
