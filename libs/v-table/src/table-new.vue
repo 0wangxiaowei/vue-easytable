@@ -194,9 +194,9 @@
                               :label="item.listindex"
                             ></v-checkbox>
                           </span>
-                          <span v-else>
+                          <div class="content-text" v-else>
                             {{ item[col.field] }}
-                          </span>
+                          </div>
                         </div>
                       </td>
                     </tr>
@@ -604,9 +604,9 @@
                               :label="rowIndex"
                             ></v-checkbox>
                           </span>
-                          <span v-else>
+                          <div  class="content-text" v-else>
                             {{ item[col.field] }}
-                          </span>
+                          </div>
                         </div>
                       </td>
                     </tr>
@@ -996,9 +996,9 @@
                           :label="rowIndex"
                         ></v-checkbox>
                       </span>
-                      <span v-else>
-                        {{ item[col.field] }}
-                      </span>
+                        <div  class="content-text" v-else>
+                            {{ item[col.field] }}
+                          </div>
                     </div>
                   </td>
                 </tr>
@@ -1400,9 +1400,9 @@
                               :label="rowIndex"
                             ></v-checkbox>
                           </span>
-                          <span v-else>
+                            <div  class="content-text" v-else>
                             {{ item[col.field] }}
-                          </span>
+                          </div>
                         </div>
                       </td>
                     </tr>
@@ -1790,9 +1790,9 @@
                           :label="rowIndex"
                         ></v-checkbox>
                       </span>
-                      <span v-else>
-                        {{ item[col.field] }}
-                      </span>
+                       <div  class="content-text" v-else>
+                            {{ item[col.field] }}
+                          </div>
                     </div>
                   </td>
                 </tr>
@@ -2513,5 +2513,10 @@ export default {
   }
 .table-div-super {
   display: flex;
+}
+.content-text{
+  width: 100%;
+   word-wrap:break-word;
+   overflow-x: scroll;
 }
 </style>
