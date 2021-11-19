@@ -15,6 +15,7 @@
     "umd"
   ],
   "dependencies": {
+    "element-ui": "^2.15.6",
     "nprogress": "^0.2.0",
     "tapable": "^2.2.0",
     "transform-runtime": "0.0.0",

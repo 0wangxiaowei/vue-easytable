@@ -195,7 +195,9 @@
                             ></v-checkbox>
                           </span>
                           <div class="content-text" v-else>
-                            {{ item[col.field] }}
+                             <el-tooltip :content="item[col.field]" placement="top">
+  <span> {{ item[col.field] }}</span>
+</el-tooltip>
                           </div>
                         </div>
                       </td>
@@ -1888,7 +1890,9 @@ import loading from "./loading.vue";
 import VCheckboxGroup from "../../v-checkbox-group/index.js";
 import VCheckbox from "../../v-checkbox/index.js";
 import VDropdown from "../../v-dropdown/index.js";
-
+import Vue from "vue";
+import ElementUI from 'element-ui';
+Vue.use(ElementUI)
 export default {
   name: "v-table",
   mixins: [
