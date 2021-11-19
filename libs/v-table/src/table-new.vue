@@ -195,9 +195,9 @@
                             ></v-checkbox>
                           </span>
                           <div class="content-text" v-else>
-                             <el-tooltip :content="item[col.field]" placement="top">
-  <span> {{ item[col.field] }}</span>
-</el-tooltip>
+                             <el-tooltip :content="contenfun(item[col.field])" placement="top">
+                              <span> {{ item[col.field] }}</span>
+                            </el-tooltip>
                           </div>
                         </div>
                       </td>
@@ -607,7 +607,9 @@
                             ></v-checkbox>
                           </span>
                           <div  class="content-text" v-else>
-                            {{ item[col.field] }}
+                           <el-tooltip :content="contenfun(item[col.field])" placement="top">
+                              <span> {{ item[col.field] }}</span>
+                            </el-tooltip>
                           </div>
                         </div>
                       </td>
@@ -999,7 +1001,9 @@
                         ></v-checkbox>
                       </span>
                         <div  class="content-text" v-else>
-                            {{ item[col.field] }}
+                           <el-tooltip :content="contenfun(item[col.field])" placement="top">
+                              <span> {{ item[col.field] }}</span>
+                            </el-tooltip>
                           </div>
                     </div>
                   </td>
@@ -1403,7 +1407,9 @@
                             ></v-checkbox>
                           </span>
                             <div  class="content-text" v-else>
-                            {{ item[col.field] }}
+                            <el-tooltip :content="contenfun(item[col.field])" placement="top">
+                              <span> {{ item[col.field] }}</span>
+                            </el-tooltip>
                           </div>
                         </div>
                       </td>
@@ -1793,7 +1799,9 @@
                         ></v-checkbox>
                       </span>
                        <div  class="content-text" v-else>
-                            {{ item[col.field] }}
+                           <el-tooltip :content="contenfun(item[col.field])" placement="top">
+                              <span> {{ item[col.field] }}</span>
+                            </el-tooltip>
                           </div>
                     </div>
                   </td>
@@ -2214,7 +2222,9 @@ export default {
     customCompFunc(params) {
       this.$emit("on-custom-comp", params);
     },
-
+contenfun(value){
+  return value+""
+},
     // 行颜色
     trBgColor(num) {
       if (
