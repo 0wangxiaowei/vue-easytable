@@ -2,10 +2,11 @@
 <div>
     <v-table width="100%" :height="300" 
 
-    tableType="rightFrozen" :columns="columns" 
+    tableType="horizontal" :columns="columns" 
     is-horizontal-resize
     :table-data="tableData" 
     :nextnum="nextnum"
+    :row-click="itemrowclick"
     :rownumber="4"
     ></v-table>
     <span v-on:click="chartClick" >修改测试</span>
@@ -48,6 +49,13 @@
         },
 
         methods:{
+            itemcellrowclick(event,isEdit,col,item,field,rowIndex){
+                              console.log('itemcellrowclick==',event,isEdit,col,item,field,rowIndex)
+
+            },
+            itemrowclick(){
+                 console.log('行点击itemrowclick==')
+            },
             chartClick(){
                 console.log(this.tableData);
                 let row = this.tableData[0];

@@ -42,12 +42,15 @@ exports.default = {
                                     this.titleDblclick && this.titleDblclick(title, field);
                         },
                         rowCellClick: function rowCellClick(rowIndex, rowData, column) {
+
                                     if (this.rowClickColor && this.rowClickColor.length > 0) {
 
                                                 this.clickRowIndex = rowIndex;
                                     }
-
-                                    this.rowClick && this.rowClick(rowIndex, rowData, column);
+                                    if(column.type !=="selection"){
+                                        this.rowClick && this.rowClick(rowIndex, rowData, column);
+                                    }
+                                    
                         },
                         rowCellDbClick: function rowCellDbClick(rowIndex, rowData, column) {
 

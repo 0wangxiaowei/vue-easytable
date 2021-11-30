@@ -2521,7 +2521,7 @@ contenfun(value){
   margin: 20px;
 }
 .columncellcanedit{
-    background-color: #2db7f5;
+    background-color: #91d2f0;
     color: white;
     cursor:pointer
   }
