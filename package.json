@@ -1,6 +1,6 @@
 {
   "name": "vue-iwarm-tools",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "vue table component",
   "main": "libs/index.js",
   "author": "https://github.com/0wangxiaowei",
