@@ -2530,6 +2530,6 @@ contenfun(value){
 .content-text{
   width: 100%;
    word-wrap:break-word;
-   overflow-x: scroll;
+   overflow-x: auto;
 }
 </style>
