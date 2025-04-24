@@ -100,10 +100,16 @@ exports.default = {
                         handleCheckChange: function handleCheckChange(rowData) {
                                     var _this2 = this;
 
-                                    this.$nextTick(function (x) {
-                                        
-                                                _this2.selectChange && _this2.selectChange(_this2.getCheckedTableRow, rowData);
-                                    });
+                                    try {
+                                        this.$nextTick(function () {
+                                            if (_this2.selectChange && typeof _this2.selectChange === 'function') {
+                                                var checkedRows = _this2.getCheckedTableRow;
+                                                _this2.selectChange(checkedRows, rowData);
+                                            }
+                                        });
+                                    } catch (error) {
+                                        console.error('复选框选择事件处理出错：', error);
+                                    }
                         },
                         handleCheckGroupChange: function handleCheckGroupChange() {
                                 

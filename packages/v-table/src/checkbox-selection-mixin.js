@@ -106,10 +106,17 @@ export default {
 
         // checkbox change event
         handleCheckChange(rowData){
-
-            this.$nextTick(x => {
-                this.selectChange && this.selectChange(this.getCheckedTableRow, rowData);
-            })
+            try {
+                this.$nextTick(() => {
+                    if (this.selectChange && typeof this.selectChange === 'function') {
+                        const checkedRows = this.getCheckedTableRow;
+                        this.selectChange(checkedRows, rowData);
+                    }
+                });
+            } catch (error) {
+                console.error('复选框选择事件处理出错：', error);
+                // 可以在这里添加错误提示UI
+            }
         },
 
         // checkbox-group change event
