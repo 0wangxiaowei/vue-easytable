@@ -97,19 +97,16 @@ exports.default = {
 
                                     this.setIndeterminateState();
                         },
-                        handleCheckChange: function handleCheckChange(rowData) {
-                                    var _this2 = this;
-
-                                    try {
-                                        this.$nextTick(function () {
-                                            if (_this2.selectChange && typeof _this2.selectChange === 'function') {
-                                                var checkedRows = _this2.getCheckedTableRow;
-                                                _this2.selectChange(checkedRows, rowData);
-                                            }
-                                        });
-                                    } catch (error) {
-                                        console.error('复选框选择事件处理出错：', error);
-                                    }
+                        handleCheckChange: function(rowData) {
+                            console.log('rowData:', rowData); // 添加此行以打印 rowData 的值
+                            if (!rowData) return; // 添加空值检查
+                            
+                            var _this = this;
+                            this.$nextTick(function() {
+                                if (_this.selectChange && typeof _this.getCheckedTableRow !== 'undefined') {
+                                    _this.selectChange(_this.getCheckedTableRow, rowData);
+                                }
+                            });
                         },
                         handleCheckGroupChange: function handleCheckGroupChange() {
                                 
